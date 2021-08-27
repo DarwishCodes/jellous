@@ -4,13 +4,20 @@
 
     &__wrap {
         display: flex;
-    }
-    &__wrap > * {
-        flex: 1;
-        display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
+
+        @include addMediaQuery(tablet) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
+    // &__wrap > * {
+    //     flex: 1;
+    //     display: flex;
+    //     justify-content: space-around;
+    //     align-items: center;
+    // }
 
 
     &__logo-box {
@@ -28,10 +35,19 @@
     &__list {
         list-style: none;
         display: flex;
+
+        @include addMediaQuery(tablet) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__item:not(:last-child) {
         margin-right: 3rem;
+
+        @include addMediaQuery(tablet) {
+            margin-right: 0;
+        }
     }
 
     &__link {
@@ -39,6 +55,10 @@
         text-decoration: none;
         font-size: 2rem;
         color: $color-red;
+
+        @include addMediaQuery(tablet) {
+            font-size: 1.3rem;
+        }
     }
 
     &__icon {
