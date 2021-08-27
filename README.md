@@ -1,2 +1,2 @@
 # Jellous
-https://darwishcodes.github.io/jellous/
+https://darwishcodes.github.io/jellous/index.html
